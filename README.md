@@ -15,7 +15,7 @@ Fork of [lastrm2vkstatus](https://github.com/DiSonDS/lastfm2vkstatus) repository
 2.  Complete the **settings.py** with last.fm username, password
 
 ### VK.com
-1.  Obtain your access token: <https://vk.cc/8GIGDH>
+1.  Obtain your access token: <https://vk.cc/8GIRRY>
 2.  Complete the **settings.py** with token
 3.  Optionally, enter custom text for the status. For a track, don't forget `{track}` variable...
 
