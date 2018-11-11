@@ -37,7 +37,8 @@ def main(lastfm, vk):
                     time.sleep(INTERVAL)
                     continue
                 if results != last_track:
-                    status_text = MUSIC_STATUS.format(track=results, username=USERNAME)
+                    track_name = str(results.get_artist()) + " – " + str(results.get_title())
+                    status_text = MUSIC_STATUS.format(track=track_name, username=USERNAME)
                     Log.info(tag, f"Last.fm user {USERNAME} listening {results}. Setting VK status:\n{status_text}")
                     vk.status.set(text=status_text)
                     last_track = results
