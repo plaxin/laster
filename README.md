@@ -1,8 +1,8 @@
-# lastfm2vkstatus
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/95b4fb07dce64f1185bfdac8d97f30ab)](https://app.codacy.com/app/DiSonDS/lastfm2vkstatus?utm_source=github.com&utm_medium=referral&utm_content=DiSonDS/lastfm2vkstatus&utm_campaign=Badge_Grade_Dashboard)
+# laster
 
 Use currently playing track as status in VK.com
+
+Fork of [lastrm2vkstatus](https://github.com/DiSonDS/lastfm2vkstatus) repository.
 
 ## Requirements
 -   pylast
@@ -17,10 +17,11 @@ Use currently playing track as status in VK.com
 ### VK.com
 1.  Obtain your access token: <https://vk.cc/8Abj47>
 2.  Complete the **settings.py** with token
+3.  Optionally, enter custom text for the status. For a track, don't forget `{track}` variable...
 
 ## Usage
 
 ```console
-python3 lastfm2vkstatus.py
+python3 laster.py
 ```
 ![Screenshot](screenshot.png)
