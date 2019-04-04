@@ -39,7 +39,8 @@ def main(lastfm, vk):
                 if results != last_track:
                     track_name = str(results.get_artist()) + " – " + str(results.get_title())
                     status_text = MUSIC_STATUS.format(track=track_name, username=USERNAME)
-                    Log.info(tag, f"Last.fm user {USERNAME} listening {results}. Setting VK status:\n{status_text}")
+                    Log.info(tag, "Last.fm user {un} listening {res}. Setting VK status:\n{status}"
+                             .format(un=USERNAME, res=results, status=status_text))
                     vk.status.set(text=status_text)
                     last_track = results
                     time.sleep(INTERVAL)
@@ -52,7 +53,7 @@ def main(lastfm, vk):
     except pylast.NetworkError:
         errors += 1
         err_time_wait = ERR_INTERVAL * errors
-        Log.warning(tag, f"Network Error. Waiting {err_time_wait}s.")
+        Log.warning(tag, "Network Error. Waiting {wait}s.".format(wait=err_time_wait))
         time.sleep(err_time_wait)
 
 
