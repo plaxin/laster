@@ -41,7 +41,7 @@ def warning(tag, message):
 
 def error(tag, e):
     log_text = str(get_sys_time()) + " /" + "E:" + str(tag) + ": " + \
-               f"An error occurred. {e.__class__.__name__}: {str(e)}"
+               "An error occurred. {class_name}: {e_str}".format(class_name=e.__class__.__name__, e_str=str(e))
     print_log(log_text)
     save_to_file(log_text)
 
